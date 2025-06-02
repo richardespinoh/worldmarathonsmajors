@@ -1,14 +1,9 @@
 #Librerias
 import streamlit as st
-from kagglehub import load_dataset, KaggleDatasetAdapter
+import pandas as pd
 import plotly.express as px
 
-df = load_dataset(
-  KaggleDatasetAdapter.PANDAS,
-  "emmanuelleai/world-marathons-majors",
-  "world_marathon_majors.csv",
-pandas_kwargs={"encoding": "latin1"}
-)
+df = pd.read_csv('world_marathon_majors.csv', index_col=False)
 
 def main():
     st.title('World Marathons Majors 🏃')

@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-df = pd.read_csv('world_marathon_majors.csv', index_col=False)
+df = pd.read_csv('dataset/world_marathon_majors.csv', index_col=False, encoding='latin1')
 
 def main():
     st.title('World Marathons Majors 🏃')
